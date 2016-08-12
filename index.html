@@ -1,0 +1,44 @@
+﻿<script src="jquery.js"></script>
+<div class="header"></div>
+<div class="placeholder"></div>
+<div style="background-color:#999999" class="footer"></div>
+<script>
+$(function(){
+	$(window).scroll(function(){
+        if ( $(this).scrollTop() >= 10 ) {
+            $('.header').addClass('header-fix');
+        } else {
+            $('.header').removeClass('header-fix');
+        }
+    })
+    });
+</script>
+<style>
+.header-fix{
+	top:0;
+	position: fixed;
+}
+	.header{
+		width: 38%;
+		background-color: #333333;
+		height:50px;
+		margin:0 0 0 30%;
+	}
+	.footer{
+		width: 38%;
+		background-color: #333333;
+		height:50px;
+		margin:100% auto 0 auto;
+	}
+	.placeholder{
+    height: 200px;
+    width: 100%;
+	}
+	@media screen and (max-width:570){
+	.header{
+		margin:0 0 0 182px;
+
+	}
+
+	}
+</style>
